@@ -1,0 +1,22 @@
+!!!
+
+html
+  head
+    link(rel="stylesheet", type="text/css", href="/style/bootstrap.min.css")
+    link(rel="stylesheet", type="text/css", href="/style/style.css")
+
+  body
+    div.text-right
+      a#logout(href="/logout")
+        i.icon-off
+
+    div#main
+
+    a#newMovie
+      i.icon-file
+      span neuen Film anlegen
+
+    script(data-main="/js/app/config", src="/js/lib/require.js")
+
+    script
+        var data = !{data}
