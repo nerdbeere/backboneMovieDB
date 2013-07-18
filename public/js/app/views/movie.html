@@ -1,35 +1,14 @@
 <td><%= name %></td>
 <td><%= year %></td>
 <td><%= genre %></td>
+
 <td class="rating">
-    <% if (rating >= 1) { %>
-        <i class="icon-star r1"></i>
-    <% } else { %>
-        <i class="icon-star-empty r1"></i>
-    <% } %>
-
-    <% if (rating >= 2) { %>
-        <i class="icon-star r2"></i>
-    <% } else { %>
-        <i class="icon-star-empty r2"></i>
-    <% } %>
-
-    <% if (rating >= 3) { %>
-        <i class="icon-star r3"></i>
-    <% } else { %>
-        <i class="icon-star-empty r3"></i>
-    <% } %>
-
-    <% if (rating >= 4) { %>
-        <i class="icon-star r4"></i>
-    <% } else { %>
-        <i class="icon-star-empty r4"></i>
-    <% } %>
-
-    <% if (rating >= 5) { %>
-        <i class="icon-star r5"></i>
-    <% } else { %>
-        <i class="icon-star-empty r5"></i>
+    <% for(var i = 1; i <= 5; i++) { %>
+        <% if (rating >= i) { %>
+        <i class="icon-star r<%= i %>"></i>
+        <% } else { %>
+        <i class="icon-star-empty r<%= i %>"></i>
+        <% } %>
     <% } %>
 </td>
 
